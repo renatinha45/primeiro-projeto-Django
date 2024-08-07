@@ -41,6 +41,6 @@ def votos(request, pergunta_id):
             }
         )
     else:
-        escolha_selecionada.votos = F("votos") + 1
+        escolha_selecionada.votos = ("votos") + 1
         escolha_selecionada.save()
     return HttpResponse(f'Você esetá votando na questão {pergunta_id}')
