@@ -29,7 +29,7 @@ def resultados(request, pergunta_id):
 def votos(request, pergunta_id):
     Perguntas = get_object_or_404 (Perguntas, pk = pergunta_id)
     try:
-        escolha_selecionada = pergunta.escolha_set.get (pk = request.POST ["escolha"])
+        escolha_selecionada = "pergunta.escolha_set.get" (pk = request.POST ["escolha"])
     except (KeyError, Escolha.DoesNotExist):
         return render(
             request,
