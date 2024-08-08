@@ -1,0 +1,6 @@
+{% for escolha in pergunta.escolha_set.all%}
+{{ escolha.texto_escolha }} -- {{ escolha.votos }} voto {{ escolha.votospluralize {{
+escolha.votospluralize }}
+{% endfor%}
+
+Quer votar novamente?
